@@ -1,0 +1,6 @@
+#lang stacker/smol/hof
+
+(deffun (add1 n)
+  (+ n 1))
+(defvar v (mvec add1))
+((vec-ref v 0) 2)

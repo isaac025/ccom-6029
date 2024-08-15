@@ -1,0 +1,9 @@
+#lang stacker/smol/fun
+
+(defvar x 1)
+(deffun (get-x) x)
+
+(deffun (main)
+  (defvar x 2)
+  (get-x))
+(main)
