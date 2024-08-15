@@ -1,0 +1,20 @@
+#lang stacker/smol/hof
+
+(deffun (make-counter count)
+  (deffun (counter)
+    (set! count (+ count 1))
+    count)
+  counter)
+(defvar f (make-counter 0))
+(defvar g (make-counter 0))
+
+(f)
+(f)
+(g)
+
+(defvar x 1)
+(defvar f
+  (lambda (y)
+    (+ x y)))
+(set! x 2)
+(f x)
